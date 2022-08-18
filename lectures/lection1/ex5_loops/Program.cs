@@ -11,9 +11,9 @@ namespace MyProgram
             //Console.SetCursorPosition(10, 4);
             //Console.WriteLine("+");
 
-            int xa = 1, ya = 1;
-            int xb = 1, yb = 30;
-            int xc = 80, yc = 30;
+            int xa = 40, ya = 1;
+            int xb = 1, yb = 40;
+            int xc = 80, yc = 40;
 
             Console.SetCursorPosition(xa, ya);
             Console.WriteLine("+");
@@ -27,7 +27,7 @@ namespace MyProgram
             int x = xa, y = xb;
             int count = 0;
 
-            while (count < 5000)
+            while (count < 7000)
             {
                 int what = new Random().Next(0,3);
                 if (what == 0)
@@ -49,6 +49,7 @@ namespace MyProgram
                 Console.WriteLine("+");
                 count++;
             }
+            Console.ReadLine();
         }
     }
 }
