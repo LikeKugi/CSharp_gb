@@ -1,0 +1,1 @@
+output pow2 of number
