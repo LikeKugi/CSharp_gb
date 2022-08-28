@@ -23,11 +23,18 @@ namespace MyProgram
             for (int i = 0; i< line.Length; i++)
             {
                 
-                if (line[i] == delC)
+                switch (line[i])
                 {
-                    line[i] = newC;
+                    case ' ':
+                        line[i] = newC;
+                    break;
+                    case 'к':
+                        line[i] = 'К';
+                    break;
+                    case 'с':
+                        line[i] = 'С';
+                    break;
                 }
-                
             }
             return line;
         }
