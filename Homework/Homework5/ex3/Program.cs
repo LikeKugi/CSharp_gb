@@ -30,10 +30,10 @@ namespace MyProgram
         }
         static int GetNumber() => Convert.ToInt32(Console.ReadLine());
         static Random rd => new Random();
-        static int[] CreateArray(int len, int min, int max) => Enumerable.Range(1, len).Select(x => rd.Next(min, max + 1)).ToArray();
-        static void PrintArray(int[] numbers) => Console.WriteLine(string.Join(" ", numbers.Select(x => x)));
-        static int FindMinElement(int[] numbers) => numbers.Aggregate(int.MaxValue,(a,x)=>(x<a)?x:a);
-        static int FindMaxElement(int[] numbers) => numbers.Aggregate(int.MinValue,(a,x)=>(x>a)?x:a);
-        static void PrintDiffMaxMin(int min, int max) => Console.WriteLine("{0} - {1} = {2}",max,min,max-min);
+        static double[] CreateArray(int len, int min, int max) => Enumerable.Range(1, len).Select(x => rd.Next(min, max + 1)+rd.NextDouble()).ToArray();
+        static void PrintArray(double[] numbers) => Console.WriteLine(string.Join(" ", numbers.Select(x => Math.Round(x,2))));
+        static double FindMinElement(double[] numbers) => numbers.Aggregate(Double.PositiveInfinity,(a,x)=>(x<a)?x:a);
+        static double FindMaxElement(double[] numbers) => numbers.Aggregate(Double.NegativeInfinity,(a,x)=>(x>a)?x:a);
+        static void PrintDiffMaxMin(double min, double max) => Console.WriteLine("{0:n2} - {1:n2} = {2:n2}",max,min,max-min);
     }
 }
