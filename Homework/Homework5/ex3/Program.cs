@@ -12,7 +12,6 @@ namespace MyProgram
         static void Main(string[] args)
         {
         // Main starts here
-            Console.Clear();
 
             Console.Clear();
             Console.WriteLine("enter length of an array: ");
