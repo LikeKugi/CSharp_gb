@@ -105,7 +105,7 @@ namespace MyProgram
             {
                 for (int j = 0; j < a.Columns; j++)
                 {
-                    if (a.Type == 1) Console.Write("{0,9:n2}", a.Data[i, j]);
+                    if (a.Type != 1) Console.Write("{0,9:n2}", a.Data[i, j]);
                     else Console.Write("{0,5:n0}", a.Data[i, j]);
                 }
                 Console.WriteLine();
