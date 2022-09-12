@@ -31,7 +31,7 @@ namespace MyProgram
                 Console.Write("how many tubes? ");
                 this.Tube = GetIntNumber();
                 this.Data = new int[this.Row, this.Column, this.Tube];
-            } while (this.Row * this.Column * this.Tube >= 100);
+            } while (this.Row * this.Column * this.Tube >= 90);
             FillingIntRandom();
         }
         // заполнение массива
